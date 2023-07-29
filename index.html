@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candy Shop Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="#default" class="logo">Candy Shop Dashboard</a>
+      <div class="header-right">
+        <!-- Add any relevant navigation links here if needed -->
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td>
+          <form onsubmit="event.preventDefault(); onFormSubmit();">
+            <div>
+              <label>Candy Name:</label>
+              <input
+                type="text"
+                name="candyName"
+                id="candyName"
+                placeholder="Enter candy name"
+                required
+              />
+            </div>
+            <br />
+            <div>
+              <label>Description:</label>
+              <textarea
+                name="description"
+                id="description"
+                placeholder="Enter candy description"
+                required
+              ></textarea>
+            </div>
+            <br />
+            <div>
+              <label>Price:</label>
+              <input
+                type="number"
+                name="price"
+                id="price"
+                placeholder="Enter candy price"
+                required
+              />
+            </div>
+            <br />
+            <div>
+              <label>Quantity:</label>
+              <input
+                type="number"
+                name="quantity"
+                id="quantity"
+                placeholder="Enter candy quantity"
+                required
+              />
+            </div>
+            <br />
+            <div class="form-action-buttons">
+              <input type="submit" value="Add Item" id="submitBtn" />
+            </div>
+          </form>
+        </td>
+        <td>
+          <table class="list" id="candyList">
+            <thead>
+              <tr>
+                <th>Candy Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+                <th>Buy 1</th>
+                <th>Buy 2</th>
+                <th>Buy 3</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Your footer code remains unchanged -->
+    <footer>
+      <div class="container footer">
+        <!-- Add your footer content here -->
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
